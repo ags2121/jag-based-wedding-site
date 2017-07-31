@@ -1,5 +1,4 @@
 let db = [
-	{'name': 'about', 'type': '1text_1photo', 'text1': 'I am JAG', 'photo1': 'jag.jpg'},
 	{
 		'name': 'narrative', 
 		'type': 'tiered_text_video', 
@@ -27,5 +26,6 @@ let db = [
 			'large': 'foo.jpg'
 		}]
 	},
+	{'name': 'about', 'type': '1text_1photo', 'text1': 'I am JAG', 'photo1': 'jag.jpg'},
 	{'name': 'contact', 'type': '1text', 'text1': 'JAG@JAG.com'}
 ];

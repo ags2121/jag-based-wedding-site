@@ -56,14 +56,10 @@ a:hover {
 .navbar-list {
 	list-style: none;
 	margin: 0;
-	display: inline-block;
-	position: absolute;
-	right: 0;
 }
 
 .navbar-item {
-    position: relative;
-    float: left;
+	display: inline;
     margin-bottom: 0;
     height: 6rem;
 }
