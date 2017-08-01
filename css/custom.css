@@ -26,6 +26,10 @@ body {
 	margin-bottom: 3rem;
 }
 
+img {
+	width: 50%;
+}
+
 
 .line:after {
 	content: '';
