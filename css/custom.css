@@ -2,6 +2,18 @@ body {
     font-family: sans-serif;
 }
 
+.header {
+	height: 10%;
+	width: 100%;
+	margin: 1%;
+}
+
+.title {
+	letter-spacing: 3.00vw;
+	text-align: center;
+	overflow: hidden;
+}
+
 .hide {
 	display: none;
 }
@@ -56,18 +68,24 @@ a:hover {
 .navbar-list {
 	list-style: none;
 	margin: 0;
+	width: 100%;
+	display: table;
+	table-layout: fixed; /* optional */
 }
 
 .navbar-item {
 	display: inline;
     margin-bottom: 0;
     height: 6rem;
+    display: table-cell;
+    width: auto;
+    text-align: center;
 }
 
 .navbar-item a {
 	font-weight: 600;
 	letter-spacing: .2rem;
-	margin-right: 35px;
+	/*margin-right: 35px;*/
 	line-height: 6.5rem;
 }
 
@@ -221,7 +239,7 @@ audio {
 }
 
 @media (max-width: 905px) {
-	.navbar-list {
+/*	.navbar-list {
 		display: block;
 	    position: inherit;
         text-align: center;
@@ -229,10 +247,10 @@ audio {
 	.navbar-item {
 		float: none;
 		display: inline-block;
-	}	
-	li:last-child a {
+	}	*/
+/*	li:last-child a {
 		margin-right: 0;
-	}
+	}*/
 	.header pre {
 		display: block;
 		text-align: center;
@@ -244,15 +262,15 @@ audio {
 }
 
 @media (max-width: 508px) {
-	.navbar-item a {
+/*	.navbar-item a {
 		margin: 0;
-	}
+	}*/
 }
 
 @media (max-width: 370px) {
-	.navbar-item a {
+/*	.navbar-item a {
 		font-size: 1.2rem;
-	}
+	}*/
 	pre {
 		font-size: 7px;
 	}
