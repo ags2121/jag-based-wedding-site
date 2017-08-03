@@ -75,19 +75,34 @@ a:hover {
 }
 
 .navbar-list {
-	list-style: none;
+/*	list-style: none;
 	margin: 0;
 	width: 100%;
 	display: table;
-	table-layout: fixed; /* optional */
+	table-layout: fixed; */
+
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	display: table;
+	border-spacing: 10px;
+	border-collapse: separate;
 }
 
 .navbar-item {
-	display: inline;
+/*	display: inline;
     margin-bottom: 0;
     height: 6rem;
     display: table-cell;
     width: auto;
+    text-align: center;*/
+
+    width: 20%;
+    vertical-align: middle;
+    display: table-cell;
+    box-sizing: border-box;
+    /*background: #fff;*/
     text-align: center;
 }
 
@@ -95,7 +110,8 @@ a:hover {
 	font-weight: 600;
 	letter-spacing: .2rem;
 	/*margin-right: 35px;*/
-	line-height: 6.5rem;
+	/*line-height: 6.5rem;*/
+	width: 100%;
 }
 
 .popover-list {
