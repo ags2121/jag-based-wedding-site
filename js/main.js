@@ -1,25 +1,25 @@
 // Views
 let createTieredTextVideo = (videos) => {
-		let i = 0;
-		return videos.map(video => {
-			let description = video['description'];
-			let thumbnail = video['thumbnail'];
-			let thumbnailHtml =
-				`
-				<li class="one-half column" data-media="">
-					<img src="assets/${thumbnail}"/>
-				</li>
-				`;
-			let descriptionHtml = 
-				`	
-				<li class="one-half column" data-media="">
-					<div class="description">${description}</div>
-				</li>
-				`;
-			let videoHtml = ++i % 2 ? thumbnailHtml + descriptionHtml : descriptionHtml + thumbnailHtml;						
-			return '<div class="row"><ul class="media-list">' + videoHtml + '</ul></div>';
-		}).join('');
-	};
+	let i = 0;
+	return videos.map(video => {
+		let description = video['description'];
+		let thumbnail = video['thumbnail'];
+		let thumbnailHtml =
+			`
+			<li class="one-half column" data-media="">
+				<img src="assets/${thumbnail}"/>
+			</li>
+			`;
+		let descriptionHtml = 
+			`	
+			<li class="one-half column" data-media="">
+				<div class="description">${description}</div>
+			</li>
+			`;
+		let videoHtml = ++i % 2 ? thumbnailH + descriptionHtml : descriptionHtml + thumbnailHtml;						
+		return '<div class="row"><ul class="media-list">' + videoHtml + '</ul></div>';
+	}).join('');
+};
 
 let navBarInnerHtml = db.reduce((t,i) => { 
 	let name = i['name']; 
