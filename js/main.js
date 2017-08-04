@@ -1,9 +1,10 @@
+
 // Views
-let createTieredTextVideo = (videos) => {
+let createOneColumnTieredTextMediaView = (medias) => {
 	let i = 0;
-	return videos.map(video => {
-		let description = video['description'];
-		let thumbnail = video['thumbnail'];
+	return medias.map(media => {
+		let description = media['description'];
+		let thumbnail = media['thumbnail'];
 		let thumbnailHtml =
 			`
 			<li class="one-half column" data-media="">
@@ -16,10 +17,38 @@ let createTieredTextVideo = (videos) => {
 				<div class="description">${description}</div>
 			</li>
 			`;
-		let videoHtml = ++i % 2 ? thumbnailH + descriptionHtml : descriptionHtml + thumbnailHtml;						
-		return '<div class="row"><ul class="media-list">' + videoHtml + '</ul></div>';
+		let mediaHtml = ++i % 2 ? thumbnailHtml + descriptionHtml : descriptionHtml + thumbnailHtml;						
+		return '<div class="row tiered"><ul class="media-list">' + mediaHtml + '</ul></div>';
 	}).join('');
 };
+
+let createTwoColumnTextMediaView = (medias) => {
+	return partition(medias.slice(), 2).map(mediasForRow => {
+		return mediasForRow.reduce((t, media) => {
+			let description = media['description'];
+			let thumbnail = media['thumbnail'];
+
+			return t +
+				`	
+				<li class="one-half column" data-media="">
+					<img src="assets/${thumbnail}"/>
+					<div class="description">${description}</div>
+				</li>
+				`;
+
+		}, '<div class="row "><ul class="media-list">') + '</ul></div>';
+	}).join('');
+};
+
+let createTextView = (texts) => {
+	return texts.map(text => `<div class="row text"><div class="column">${text}</div></div>`).join('');
+};
+
+let viewFunctionLookup = {
+	'one_column_tiered_text_media': createOneColumnTieredTextMediaView,
+	'two_column_text_media': createTwoColumnTextMediaView,
+	'text': createTextView
+}
 
 let navBarInnerHtml = db.reduce((t,i) => { 
 	let name = i['name']; 
@@ -34,7 +63,7 @@ document.querySelector('.navbar-list').innerHTML = navBarInnerHtml;
 
 let containersHtml = db.reduce((t, page) => { 
 	let name = page['name'];
-	let body = page['type'] == 'tiered_text_video' ? createTieredTextVideo(page['media']) : name;
+	let body = viewFunctionLookup[page['type']](page['data']);
 	return t + `<div class="container hide ${name}">${body}</div>`;
 }, "");
 document.querySelector('.containers').innerHTML = containersHtml;

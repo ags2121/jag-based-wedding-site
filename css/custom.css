@@ -47,6 +47,10 @@ img {
     position: absolute;
 }
 
+.row.text {
+	text-align: center;
+}
+
 
 .line:after {
 	content: '';
