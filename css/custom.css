@@ -25,6 +25,8 @@ body {
 
 .container {
 	margin-bottom: 2rem;
+	position: relative;
+	/*min-height: 50em;*/
 }
 
 .carousel {
@@ -33,6 +35,16 @@ body {
 
 img {
 	width: 50%;
+}
+
+.popup {
+    height: 70%;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    background: white;
+    position: absolute;
 }
 
 
