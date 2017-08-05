@@ -23,7 +23,7 @@ body {
 	display: none;
 }
 
-.container {
+.content {
 	margin-bottom: 2rem;
 	position: relative;
 	/*min-height: 50em;*/
@@ -38,14 +38,18 @@ img {
 }
 
 .popup {
-    height: 70%;
-    top: 0;
-    left: 15%;
-    right: 15%;
-    width: 70%;
-    background: white;
-    position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	background: white;
+	position: absolute;
+	transform: translateX(13%);
 }
+
+.popup img {
+	width: 100%;
+}
+
 
 .row.text {
 	text-align: center;

@@ -1,5 +1,7 @@
 
 // Views
+let popupView = `<div class="popup hide"> <img src='assets/foo_thumb.png' /> </div>`;
+
 let createOneColumnTieredTextMediaView = (medias) => {
 	let i = 0;
 	return medias.map(media => {
@@ -8,7 +10,7 @@ let createOneColumnTieredTextMediaView = (medias) => {
 		let thumbnailHtml =
 			`
 			<li class="one-half column" data-media="">
-				<img src="assets/${thumbnail}"/>
+				<img class="thumbnail" src="assets/${thumbnail}"/>
 			</li>
 			`;
 		let descriptionHtml = 
@@ -19,7 +21,7 @@ let createOneColumnTieredTextMediaView = (medias) => {
 			`;
 		let mediaHtml = ++i % 2 ? thumbnailHtml + descriptionHtml : descriptionHtml + thumbnailHtml;						
 		return '<div class="row tiered"><ul class="media-list">' + mediaHtml + '</ul></div>';
-	}).join('');
+	}).join('') + popupView;
 };
 
 let createTwoColumnTextMediaView = (medias) => {
@@ -31,13 +33,13 @@ let createTwoColumnTextMediaView = (medias) => {
 			return t +
 				`	
 				<li class="one-half column" data-media="">
-					<img src="assets/${thumbnail}"/>
+					<img class="thumbnail" src="assets/${thumbnail}"/>
 					<div class="description">${description}</div>
 				</li>
 				`;
 
 		}, '<div class="row "><ul class="media-list">') + '</ul></div>';
-	}).join('');
+	}).join('') + popupView;
 };
 
 let createTextView = (texts) => {
@@ -94,6 +96,14 @@ function showContainer(containerIds, containerIdToShow) {
 		document.querySelector(`.container.${containerId}`).classList.remove('hide');
 	}
 }
+
+// Event handlers
+document.querySelectorAll('.thumbnail').forEach(t => {
+	t.addEventListener('click', e => {
+		let popup = e.currentTarget.closest('.container').querySelector('.popup');
+		popup.classList.remove('hide');
+	});
+});
 
 // Utility funcs
 function partition(array, n) {
