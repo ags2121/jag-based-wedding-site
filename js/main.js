@@ -25,6 +25,7 @@ let createPopUpView = (mediaType) => {
 	}
 
 	let innerContainer = mediaType == "video" ? videoView : photoView;
+
 	return `
 		<div class="popup hide">
 			<div class="close"><a>&#10005;</a></div>
@@ -112,7 +113,6 @@ let createNavbarView = (db) => {
 	}, "");
 };
 
-
 // Create Views
 
 document.querySelector('.navbar-list').innerHTML = createNavbarView(db);
@@ -190,19 +190,26 @@ document.querySelectorAll('.close').forEach(close => {
 });
 
 function slidePopup(popup, doSlideLeft) { 
-	popup.closest('.container')
-	var currentImage = document.querySelectorAll('.carousel .artist-image')[index];
+	let containerName = popup.closest('.container').getAttribute('data-name');
+	let page = db.filter(page => page['name'] == containerName)[0];
+	let mediaCollection = page['data'];
+	let carouselIndex = page['carouselIndex'];	
+
 	if (doSlideLeft) {
-		index--;
-		if (index < 0) {
-			index = artists.length-1;
+		carouselIndex--;
+		if (carouselIndex < 0) {
+			carouselIndex = mediaCollection.length-1;
 		}
 	} else {
-		index++;
-		if (index > artists.length-1) {
-			index = 0;
+		carouselIndex++;
+		if (carouselIndex > mediaCollection.length-1) {
+			carouselIndex = 0;
 		}
 	}
+
+	page['carouselIndex'] = carouselIndex;
+	let nextMediaUrl = mediaCollection[carouselIndex]['media']['url'];
+	setPopupMedia(popup, nextMediaUrl);
 };
 
 document.querySelectorAll('.arrow').forEach(a => {
