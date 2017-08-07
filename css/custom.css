@@ -57,9 +57,9 @@ img {
 
 .close {
 	position: absolute;
-	right: 3px;
-	top: -4px;
-	font-size: 1.5em;
+	right: 4px;
+	top: -3px;
+	font-size: 1.3em;
 }
 
 .popup {
