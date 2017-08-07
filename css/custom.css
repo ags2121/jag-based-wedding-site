@@ -235,16 +235,16 @@ img.ondeck {
 	cursor: pointer; 
 	width: 0; 
 	height: 0;
-	border-top: 3rem solid transparent;
-	border-bottom: 3rem solid transparent;
+	border-top: 5em solid transparent;
+	border-bottom: 5em solid transparent;
 	top: 50%;
 	position: absolute;
 	transform: translateY(-50%);
 }
 
 .right {
-  border-left: 3rem solid green;
-  right: 1rem;
+  border-left: 1.4em solid;
+  right: 1px;
 }
 
 .right:hover {
@@ -252,8 +252,8 @@ img.ondeck {
 }
 
 .left {
-  border-right: 3rem solid blue;   
-  left: 1rem;
+  border-right: 1.4em solid;   
+  left: 0;
 }
 
 .left:hover {

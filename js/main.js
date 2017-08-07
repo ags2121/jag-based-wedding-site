@@ -13,6 +13,12 @@ let photoView = `
 	</div>
 `;
 
+let createImageView = (mediaType, thumbnail, url) => {
+	return `
+		<a> <img class="${mediaType ? 'thumbnail' : ''}" src="assets/${thumbnail}" data-media="${url}" /></a>
+	`;
+};
+
 let createPopUpView = (mediaType) => {
 	if (!mediaType) {
 		return '';
@@ -20,11 +26,13 @@ let createPopUpView = (mediaType) => {
 
 	let innerContainer = mediaType == "video" ? videoView : photoView;
 	return `
-		<div class="popup hide"> 
+		<div class="popup hide">
 			<div class="close"><a>&#10005;</a></div>
 			<div class="outer-container">
 				${innerContainer}
 			</div>
+			<div class="arrow left"></div>
+      		<div class="arrow right"></div>
 		</div>
 	`;
 };
@@ -40,7 +48,7 @@ let createOneColumnTieredTextMediaView = (media) => {
 		let thumbnailHtml =
 			`
 			<li class="one-half column">
-				<a> <img class="${mediaType ? 'thumbnail' : ''}" src="assets/${thumbnail}" data-media="${media['media']['url']}" /></a>
+				${createImageView(mediaType, thumbnail, media['media']['url'])}
 			</li>
 			`;
 		let descriptionHtml = 
@@ -84,25 +92,33 @@ let viewFunctionLookup = {
 	'one_column_tiered_text_media': createOneColumnTieredTextMediaView,
 	'two_column_text_media': createTwoColumnTextMediaView,
 	'text': createTextView
-}
+};
+
+let createPageView = (pageViewData) => {
+	let name = pageViewData['name'];
+	let body = viewFunctionLookup[pageViewData['type']](pageViewData);
+	return `<div class="container hide ${name}" data-name=${name}>${body}</div>`;
+};
+
+let createNavbarView = (db) => {
+	return db.reduce((t, pageViewData) => { 
+		let name = pageViewData['name']; 
+		return t + 
+			`
+			<li class="navbar-item">
+				<a class="navbar-link" href="#${name}">${name}</a>
+			</li>
+			`;
+	}, "");
+};
+
 
 // Create Views
 
-let navBarInnerHtml = db.reduce((t,i) => { 
-	let name = i['name']; 
-	return t + 
-		`
-		<li class="navbar-item">
-			<a class="navbar-link" href="#${name}">${name}</a>
-		</li>
-		`;
-}, "");
-document.querySelector('.navbar-list').innerHTML = navBarInnerHtml;
+document.querySelector('.navbar-list').innerHTML = createNavbarView(db);
 
 let containersHtml = db.reduce((t, page) => { 
-	let name = page['name'];
-	let body = viewFunctionLookup[page['type']](page);
-	return t + `<div class="container hide ${name}">${body}</div>`;
+	return t + createPageView(page);
 }, "");
 document.querySelector('.containers').innerHTML = containersHtml;
 
@@ -146,18 +162,55 @@ function setPopupMedia(popup, url) {
   matchingElements[0].setAttribute('src', url);
 }
 
+let disableThumbnailsInContainer = (container) => {
+	container.querySelectorAll('img').forEach(i => { i.style.pointerEvents = 'none'; })
+};
+
+let reenableThumbnailsInContainer = (container) => {
+	container.querySelectorAll('img').forEach(i => { i.style.pointerEvents = 'auto'; })
+};
+
 document.querySelectorAll('.thumbnail').forEach(t => {
 	t.addEventListener('click', e => {
 		let popup = e.currentTarget.closest('.container').querySelector('.popup');
 		let url = e.currentTarget.getAttribute('data-media');
 		setPopupMedia(popup, url);
 		popup.classList.remove('hide');
+		disableThumbnailsInContainer(popup.closest('.container'));
 	});
 });
 
 document.querySelectorAll('.close').forEach(close => {
 	close.addEventListener('click', e => {
-		e.currentTarget.closest('.popup').classList.add('hide');
+		let popup = e.currentTarget.closest('.popup')
+		popup.classList.add('hide');
+		setPopupMedia(popup, '');
+		reenableThumbnailsInContainer(popup.closest('.container'));
+	});
+});
+
+function slidePopup(popup, doSlideLeft) { 
+	popup.closest('.container')
+	var currentImage = document.querySelectorAll('.carousel .artist-image')[index];
+	if (doSlideLeft) {
+		index--;
+		if (index < 0) {
+			index = artists.length-1;
+		}
+	} else {
+		index++;
+		if (index > artists.length-1) {
+			index = 0;
+		}
+	}
+};
+
+document.querySelectorAll('.arrow').forEach(a => {
+	a.addEventListener('click', e => {
+		e.preventDefault();
+		let doSlideLeft = e.currentTarget.classList.contains('left');
+		let popup = e.currentTarget.closest('.popup');
+		slidePopup(popup, doSlideLeft);
 	});
 });
 
