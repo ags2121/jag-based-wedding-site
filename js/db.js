@@ -1,79 +1,34 @@
 let db = [
 	{
-		'name': 'narrative', 
-		'type': 'one_column_tiered_text_media',
-		'media_type': "video",
-		'carouselIndex': 0,
-		'data': [{
-			'name': 'foo',
-			'thumbnail': 'foo_thumb.png',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/V5hOm8_3mJA?ecver=2', 'type': 'video_embed'}
-		},
-		{
-			'name': 'foo',
-			'thumbnail': 'foo_thumb.png',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/-75u3ZzzdPc?ecver=2', 'type': 'video_embed'}
-		},
-		{
-			'name': 'foo',
-			'thumbnail': 'foo_thumb.png',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/V5hOm8_3mJA?ecver=2', 'type': 'video_embed'}
-		}]
+		'name': 'home',
+		'type': 'text',
+		'data': [
+			'<img src="assets/cait-n-alex-mirror.jpg" />',
+			'<em>Join us for a wedding celebration!</em>',
+			'<br/>',
+			"Saturday June 20, 2020",
+			"Trefethen-Evergreen Improvement Association",
+			"Peaks Island, Portland, Maine"
+		]
 	},
 	{
-		'name': 'docs', 
-		'type': 'one_column_tiered_text_media',
-		'media_type': "video",
-		'carouselIndex': 0,
-		'data': [{
-			'name': 'foo',
-			'thumbnail': 'roo_thumb.jpg',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/V5hOm8_3mJA?ecver=2', 'type': 'video_embed'}
-		},
-		{
-			'name': 'foo',
-			'thumbnail': 'roo_thumb.jpg',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/-75u3ZzzdPc?ecver=2', 'type': 'video_embed'}
-		},
-		{
-			'name': 'foo',
-			'thumbnail': 'roo_thumb.jpg',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'https://www.youtube.com/embed/V5hOm8_3mJA?ecver=2', 'type': 'video_embed'}
-		}]
+		'name': 'schedule',
+		'type': 'text',
+		'data': ["coming soon..."]
 	},
 	{
-		'name': 'stills', 
-		'type': 'two_column_text_media',
-		'media_type': "photo",
-		'carouselIndex': 0,
-		'data': [{
-			'name': 'foo',
-			'thumbnail': 'foo_thumb.png',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'assets/foo_thumb.png', 'type': 'image_local'}
-		},
-		{
-			'name': 'roo',
-			'thumbnail': 'roo_thumb.jpg',
-			'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-			'media': {'url': 'assets/roo_thumb.jpg', 'type': 'image_local'}
-		}]
+		'name': 'travel',
+		'type': 'text',
+		'data': ["coming soon..."]
 	},
 	{
-		'name': 'about', 
-		'type': 'one_column_tiered_text_media', 
-		'data': [{
-			'name': 'foo',
-			'thumbnail': 'roo_thumb.jpg',
-			'description': 'I am J.A.G.',
-			'media': {'url': 'assets/roo_thumb.png', 'type': 'image_local'}
-		}]
+		'name': 'registry',
+		'type': 'text',
+		'data': ["coming soon..."]
 	},
-	{'name': 'contact', 'type': 'text', 'data': ['JAG@JAG.com']}
+	{
+		'name': 'rsvp',
+		'type': 'text', 
+		'data': ["coming soon..."]
+	}
 ];

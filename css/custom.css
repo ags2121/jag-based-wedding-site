@@ -32,7 +32,8 @@ body {
 }
 
 .title {
-	letter-spacing: 3.00vw;
+	letter-spacing: 1.00vw;
+	font-size: 2em;
 	text-align: center;
 	overflow: hidden;
 }
@@ -79,6 +80,7 @@ img {
 
 .row.text {
 	text-align: center;
+	letter-spacing: .2rem;
 }
 
 
@@ -127,13 +129,14 @@ a:hover {
 	display: table;
 	table-layout: fixed; */
 
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 0;
 	list-style: none;
 	display: table;
 	border-spacing: 10px;
 	border-collapse: separate;
+	margin-bottom: 1%;
 }
 
 .navbar-item {
@@ -232,8 +235,8 @@ img.ondeck {
 }
 
 .arrow {
-	cursor: pointer; 
-	width: 0; 
+	cursor: pointer;
+	width: 0;
 	height: 0;
 	border-top: 5em solid transparent;
 	border-bottom: 5em solid transparent;
@@ -252,7 +255,7 @@ img.ondeck {
 }
 
 .left {
-  border-right: 1.4em solid;   
+  border-right: 1.4em solid;
   left: 0;
 }
 
@@ -328,7 +331,7 @@ audio {
 		margin: 0;
 		border: 0 solid #fff;
 		border-bottom-width: 3px;
-     	padding-bottom: 8px; 
+     	padding-bottom: 8px;
 	}
 }
 
