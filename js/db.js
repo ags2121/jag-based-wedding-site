@@ -8,7 +8,10 @@ let db = [
 			'<br/>',
 			"Saturday June 20, 2020",
 			"Trefethen-Evergreen Improvement Association",
-			"Peaks Island, Portland, Maine"
+			"Peaks Island, Portland, Maine",
+			'<br/>',
+			"Questions?",
+			"Email us at caitandalexwedding@gmail.com"
 		]
 	},
 	{
