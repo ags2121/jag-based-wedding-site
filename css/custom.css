@@ -122,6 +122,11 @@ a:hover {
 	color: gray;
 }
 
+a.link {
+	color: #1EAEDB;
+	text-decoration: underline;
+}
+
 .navbar-list {
 /*	list-style: none;
 	margin: 0;
