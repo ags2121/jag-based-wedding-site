@@ -40,7 +40,7 @@ let db = [
 		'data': [
 			'<u>Getting There</u>',
 			'The local airport is in Portland, Maine (PWM). ',
-			'If you fly to Boston, there’s a direct bus to Portland from Logan Airport.',
+			'If you fly to Boston, there’s a direct bus from Logan Airport to Portland on Concord Coach Lines.',
 			'Casco Bay Ferry Lines will take guests to and from Peaks Island on a short, 15 minute ride. ',
 			'Ferries run every hour and a charter bus will take guests from the ferry to the venue.',
 			'<br/>',
@@ -49,7 +49,7 @@ let db = [
 			'○○○',
 			'<br/>',
 			'<u>Accommodations</u>',
-			'Portland is a short ferry ride form Peaks Island and there are many places to stay there.',
+			'Portland is a short ferry ride from Peaks Island and there are many places to stay there.',
 			'Here are a few recommendations:',
 			'<br/>',
 			'<em>Closest to Ferry Terminal in Portland</em>',
