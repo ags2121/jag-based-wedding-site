@@ -15,7 +15,7 @@ let db = [
 		]
 	},
 	{
-		'name': 'schedule',
+		'name': 'info',
 		'type': 'text',
 		'data': [
 			'Friday June 19, 2020',
