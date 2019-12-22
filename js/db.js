@@ -9,9 +9,6 @@ let db = [
 			"Saturday June 20, 2020",
 			"Trefethen-Evergreen Improvement Association",
 			"Peaks Island, Portland, Maine",
-			'<br/>',
-			"Questions?",
-			"Email us at caitandalexwedding@gmail.com"
 		]
 	},
 	{
@@ -32,6 +29,9 @@ let db = [
 			'<br/>',
 			'○○○',
 			'<br/>',
+			"Questions?",
+			"Email us at caitandalexwedding@gmail.com",
+			'<br/>',
 			'<em>More details to come!</em>',
 			'<br/>',
 			'<img src="assets/teia.jpg" />'
@@ -44,7 +44,7 @@ let db = [
 			'<u>Getting There</u>',
 			'The local airport is in Portland, Maine (PWM). ',
 			'If you fly to Boston, there’s a direct bus from Logan Airport to Portland on Concord Coach Lines.',
-			'Casco Bay Ferry Lines will take guests to and from Peaks Island on a short, 15 minute ride. ',
+			'Casco Bay Lines will take guests to and from Peaks Island on a short, 15 minute ferry ride.',
 			'Ferries run every hour and a charter bus will take guests from the ferry to the venue.',
 			'<br/>',
 			'More details about day of travel to come!',
@@ -66,7 +66,7 @@ let db = [
 			'Danforth Inn',
 			'<br/>',
 			'<em>Staying on Peaks Island</em>',
-			'If you plan to stay on the island, we recommend looking at <a class="link" href="https://www.airbnb.com/s/Peaks-Island--ME">Airbnb</a> or <a class="link" href="https://www.vrbo.com/vacation-rentals/usa/maine/portland-casco-bay/peaks-island?k_clickid=Cj0KCQiAiZPvBRDZARIsAORkq7dbcOnY_C8vH1MYC9bBfx4zccxXQQy08iFHiNd-sWUOktChHQHjHCQaAh4sEALw_wcB&ds_cid=71700000026971550&ds_kids=p26947601768&ds_kid=43700026947601768&ksprof_id=700000001592040&ksdevice=c&ktarget=aud-410759985734:kwd-372504813761&kloct=&klocf=9004354&ds_aid=58700003367894209&ha_t=1t2:g:&gclid=Cj0KCQiAiZPvBRDZARIsAORkq7dbcOnY_C8vH1MYC9bBfx4zccxXQQy08iFHiNd-sWUOktChHQHjHCQaAh4sEALw_wcB&gclsrc=aw.ds">VRBO</a>. Many are week-long rentals and nightly rentals are less common, so it is good to search and book early. The island is generally walkable, but renting a golf cart or bikes is a nice way to get around. Keep in mind the venue is on the north side of the island (at Trefethen Ave and Island Ave), so a spot in the village center or closer the venue would be ideal.  Some ferries also allow cars if you would like to bring a car.',
+			'If you plan to stay on the island, we recommend looking at <a class="link" href="https://www.airbnb.com/s/Peaks-Island--ME">Airbnb</a> or <a class="link" href="https://www.vrbo.com/vacation-rentals/usa/maine/portland-casco-bay/peaks-island?k_clickid=Cj0KCQiAiZPvBRDZARIsAORkq7dbcOnY_C8vH1MYC9bBfx4zccxXQQy08iFHiNd-sWUOktChHQHjHCQaAh4sEALw_wcB&ds_cid=71700000026971550&ds_kids=p26947601768&ds_kid=43700026947601768&ksprof_id=700000001592040&ksdevice=c&ktarget=aud-410759985734:kwd-372504813761&kloct=&klocf=9004354&ds_aid=58700003367894209&ha_t=1t2:g:&gclid=Cj0KCQiAiZPvBRDZARIsAORkq7dbcOnY_C8vH1MYC9bBfx4zccxXQQy08iFHiNd-sWUOktChHQHjHCQaAh4sEALw_wcB&gclsrc=aw.ds">VRBO</a>. Keep in mind there are a limited number of nightly rentals, so it is good to book early. Peaks Island is a 740 acre walkable island, but renting golf carts or bikes is a nice way to get around. The venue is on the north side of the island (at Trefethen Ave and Island Ave), so a spot in the village center or closer the venue would be ideal. A limited number of cars are allowed on Casco Bay Lines on a first come, first served basis.',
 			'<br/>',
 			'<img src="assets/cant_wait.jpg" />'
 		]
