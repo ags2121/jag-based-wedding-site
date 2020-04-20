@@ -6,7 +6,7 @@ let db = [
 			'<img src="assets/cait-n-alex-mirror.jpg" />',
 			'<em>Join us for a wedding celebration!</em>',
 			'<br/>',
-			"Saturday June 20, 2020",
+			"Saturday June 5, 2021",
 			"Trefethen-Evergreen Improvement Association",
 			"Peaks Island, Portland, Maine"
 		]
@@ -16,14 +16,14 @@ let db = [
 		'type': 'text',
 		'data': [
 			'<u>Schedule</u>',
-			'Friday June 19, 2020',
+			'Friday June 4, 2021',
 			'5pm – 7pm',
 			'Happy hour welcome reception in Portland',
 			'Location TBD',
 			'<br/>',
 			'○○○',
 			'<br/>',
-			'Saturday June 20, 2020',
+			'Saturday June 5, 2021',
 			'3pm – 11pm',
 			'Ceremony, dinner, and dancing',
 			'Trefethen-Evergreen Improvement Association on Peaks Island',
